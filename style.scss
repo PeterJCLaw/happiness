@@ -30,7 +30,7 @@ body > *, body > * > *, body > * > * > * {
 #left, #right {
 	bottom: 0;
 	overflow: auto;
-	top: $topHeight;
+	top: $topHeight + $regionBorderWidth;
 }
 
 #left {
@@ -79,7 +79,7 @@ div#edit.mode textarea {
 
 ul.lhs {
 	display: block;
-	margin: $regionBorderWidth 0 0;
+	margin: 0;
 	padding: 0;
 }
 
