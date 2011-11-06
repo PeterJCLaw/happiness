@@ -2,10 +2,16 @@
 $srBlue: #253571;
 $topHeight: 4.6em;
 $border: solid grey;
-$regionBorderWidth: 3px;
+$regionBorderWidth: 0.2em;
 $regionBorder: $regionBorderWidth $border;
-$lhsListItemBorderWidth: 2px;
+$lhsListItemBorderWidth: 0.15em;
 $lhsListItemBorder: $lhsListItemBorderWidth $border;
+
+$lhsTitleVerticalPadding: 0.6em;
+$lhsLineHeight: 1em;
+
+$numOtherTabs: 3;	// The number of li elements in the #other-tabs
+$heightOtherTabs: $numOtherTabs * ($lhsLineHeight + $lhsTitleVerticalPadding * 2 + $lhsListItemBorderWidth);
 
 body {
 	margin: 0;
@@ -36,6 +42,17 @@ body > *, body > * > *, body > * > * > * {
 #left {
 	border-right: $regionBorder;
 	width: 20%;
+}
+
+#left-top { // from http://www.cssstickyfooter.com/ #wrap
+	min-height: 100%;
+}
+
+#left-bottom { // from http://www.cssstickyfooter.com/ #footer
+	clear: both;
+	height: -1 * $heightOtherTabs;
+	margin-top: -1 * $heightOtherTabs;
+	position: relative;
 }
 
 #right {
@@ -89,11 +106,12 @@ ul.lhs li {
 ul.lhs > li > a {
 	display: block;
 	font-weight: bold;
-	padding: 0.5em 0 0.5em 20px;
+	line-height: $lhsLineHeight;
+	padding: $lhsTitleVerticalPadding 0 $lhsTitleVerticalPadding 20px;
 }
 ul.lhs > li.expanded > a {
 	background-color: #eee;
-	padding-bottom: 0.2em;
+	padding-bottom: 0.3em;
 }
 
 ul.lhs li a {
@@ -105,9 +123,13 @@ ul.lhs li a:hover {
 	background-color: $highlightColour;
 }
 
-
 /* Projects listing specifics */
 
+#projects {
+	// from http://www.cssstickyfooter.com/ #main
+	overflow: auto;
+	padding-bottom: $heightOtherTabs - $lhsListItemBorderWidth;
+}
 #projects > li {
 	border-bottom: $lhsListItemBorder;
 }
@@ -121,3 +143,8 @@ ul.lhs li a:hover {
 	display: none;
 }
 
+/* Other-tabs specifics */
+
+#other-tabs li {
+	border-top: $lhsListItemBorder;
+}
