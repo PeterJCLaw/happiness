@@ -10,6 +10,8 @@ $ ->
 	$.log('beans')
 	addModes()
 	setupProjects()
+	$('#dashboard').show()
+	/* this is the default */
 
 addModes = () ->
 	modes = $('#right .mode')
@@ -25,6 +27,8 @@ addMode = (mode) ->
 		$(mode).show()
 		if mode.id == 'edit'
 			launchEditor()
+		else if mode.id == 'docs'
+			launchDocs()
 
 setupProjects = () ->
 	projects = $('#projects > li > a')
@@ -38,6 +42,12 @@ setupProjects = () ->
 		$(this).parent().addClass(expanded).removeClass(collapsed)
 		return false;
 
+launchDocs = () ->
+	docsHome =  'https://www.studentrobotics.org/docs/'
+	frame = $('#docs-frame')[0]
+	if frame.src != docsHome
+		frame.src = docsHome
+
 launchEditor = () ->
 	if editor == null
-		editor = ace.edit('editor');
+		editor = ace.edit('editor')

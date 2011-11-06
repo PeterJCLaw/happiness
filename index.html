@@ -19,6 +19,7 @@
 <div id="left">
 	<div id="left-top">
 		<ul id="projects" class="lhs">
+			<!-- sort list by activity? -->
 			<li class="expanded">
 				<a href="#" class="name">Project 1</a>
 				<ul class="files">
@@ -71,6 +72,12 @@
 					</li>
 				</ul>
 			</li>
+		<!-- /ul>
+		eventually Docs would be on its own list, for now that causes styling issues I can't be bothered to fix
+		<ul id="other-tabs" class="lhs" -->
+			<li>
+				<a href="#" class="name">Docs</a>
+			</li>
 		</ul>
 	</div>
 	<div id="left-bottom">
@@ -91,12 +98,78 @@
 
 	<div id="right-box">
 
-		<div class="mode" id="debug">
-			<pre>-> This is some text</pre>
+		<style type="text/css">
+			dt { font-weight: bold; }
+			.mode > * { margin: 15px; }
+			.milestones { width: 25em; }
+			.milestones * { margin: 2px; }
+		</style>
+
+		<div class="mode" id="about">
+			<p>Lift the content per the about box from the old front-end.</p>
+			<p>
+				Could this information be moved out?<br />
+				 * dynamic (version/user) to being part of the dashboard<br />
+				 * constant info (keyboard shortcuts) to being in the docs
+			</p>
+		</div>
+
+		<div class="mode" id="dashboard">
+			<!-- Similar to the old Switchboard, but gets a mix-up. -->
+			<strong>Welcome to the IDE.</strong>
+			<p>From here you can edit your robot's code, </p>
+			<dl>
+				<dt>Resources:</dt>
+				<dd>
+					<ul>
+						<li>Docs (click: internal represenation; middle-click: opens externally right into the docs)</li>
+						<li>Forums (external only)</li>
+						<li>Rules (external only?)</li>
+					</ul>
+				</dd>
+				<dt>Milestones:</dt>
+				<dd class="milestones">
+					<hr />
+					<pre>|      >  |              |               ||</pre>
+					<hr />
+				</dd>
+				<dt>Recent Activity:</dt>
+				<dd>
+					<p>Summarise activity accross all the user's projects?</p>
+					<p>User blog feeds per the old front-end? Should this be on its own page?</p>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="mode" id="docs">
+			<!-- Docs browser - shows content from the main website. -->
+			<iframe id="docs-frame"></iframe>
 		</div>
 
 		<div class="mode" id="edit">
 			<div id="editor">This is some text</div>
+		</div>
+
+		<div class="mode" id="project">
+			<dl>
+				<dt>Describe your project:</dt>
+				<dd>
+					<textarea id="project-description" cols="80" rows="5">Our project is awesome!</textarea>
+				</dd>
+				<dt>Recent Activity:</dt>
+				<dd>
+					<ul id="project-log">
+						<li>[12:03, user1] Add a file.</li>
+						<li>[yesterday, user2] Create the project.</li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="mode" id="settings">
+			<p>Lift (and extend) the user settings from the old front-end.</p>
+			<p>Move the blog feed submission to being a user setting?</p>
+			<p>Add a setting to determine the default landing page.</p>
 		</div>
 
 	</div>

@@ -152,3 +152,12 @@ ul.lhs li a:hover {
 #other-tabs li {
 	border-top: $lhsListItemBorder;
 }
+
+/* Various mode bits */
+#docs-frame {
+	border: 0;
+	height: 100%;
+	margin: 0;
+	position: absolute;
+	width: 100%;
+}
