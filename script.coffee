@@ -1,6 +1,7 @@
 
 $ = jQuery
 
+editor = null
 modes = null
 projects = null
 
@@ -22,6 +23,8 @@ addMode = (mode) ->
 	button.click ->
 		modes.hide()
 		$(mode).show()
+		if mode.id == 'edit'
+			launchEditor()
 
 setupProjects = () ->
 	projects = $('#projects > li > a')
@@ -34,3 +37,7 @@ setupProjects = () ->
 		parents.removeClass(expanded).addClass(collapsed)
 		$(this).parent().addClass(expanded).removeClass(collapsed)
 		return false;
+
+launchEditor = () ->
+	if editor == null
+		editor = ace.edit('editor');
