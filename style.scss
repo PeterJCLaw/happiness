@@ -23,10 +23,12 @@ body > *, body > * > *, body > * > * > * {
 	height: $topHeight;
 	width: 100%;
 	top: 0;
+	z-index: 99;
 }
 
 #left, #right {
 	bottom: 0;
+	overflow: auto;
 	top: $topHeight;
 }
 
