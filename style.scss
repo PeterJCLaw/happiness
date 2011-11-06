@@ -1,0 +1,109 @@
+
+$srBlue: #253571;
+$topHeight: 4.6em;
+$border: solid grey;
+$regionBorderWidth: 3px;
+$regionBorder: $regionBorderWidth $border;
+$projectBorder: 2px $border;
+
+body {
+	margin: 0;
+}
+
+body > div {
+	position: absolute;
+}
+
+body > *, body > * > *, body > * > * > * {
+/*	outline: 1px solid green; /* */
+}
+
+#top {
+	border-bottom: $regionBorder;
+	height: $topHeight;
+	width: 100%;
+	top: 0;
+}
+
+#left, #right {
+	bottom: 0;
+	top: $topHeight;
+}
+
+#left {
+	width: 20%;
+}
+
+#right {
+	border-left: $regionBorder;
+	right: 0;
+	width: 80%;
+}
+
+#mode-select {
+	margin: 0;
+}
+#mode-select li {
+	display: block;
+	float: left;
+}
+#mode-select li button {
+	padding: 0.8em;
+	margin: 1em 2em;
+}
+
+.mode {
+	bottom: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+div#edit.mode textarea {
+	height: 98%;
+	width: 98%;
+}
+
+
+/* Projects listing */
+
+#projects {
+	display: block;
+	margin: $regionBorderWidth 0 0;
+	padding: 0;
+}
+
+#projects li {
+	display: block;
+}
+#projects > li {
+	border-bottom: $projectBorder;
+}
+#projects > li > a {
+	display: block;
+	font-weight: bold;
+	padding: 0.5em 0 0.5em 20px;
+}
+#projects > li.expanded > a {
+	background-color: #eee;
+	padding-bottom: 0.2em;
+}
+
+#projects li a {
+	color: black;
+	text-decoration: none;
+}
+$highlightColour: lightGrey;
+#projects li a:hover {
+	background-color: $highlightColour;
+}
+#projects ul.files {
+	margin-bottom: 3px;
+}
+#projects ul.files a:hover {
+	outline: 3px solid $highlightColour;
+}
+#projects li.collapsed ul.files {
+	display: none;
+}
+

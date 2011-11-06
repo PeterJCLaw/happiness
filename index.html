@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>$title</title>
+	<!-- Stylesheets -->
+	<link type="text/css" rel="stylesheet" href="style.css"></script>
+	<!-- Javascript -->
+	<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="jquery.log.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+<!-- $body -->
+<div id="top">
+	<ul id="mode-select">
+	</ul>
+</div>
+<div id="left">
+	<ul id="projects">
+		<li class="expanded">
+			<a href="#" class="name">Project 1</a>
+			<ul class="files">
+				<li>
+					<a href="#" class="name">robot.py</a>
+				</li>
+				<li>
+					<a href="#" class="name">lib.py</a>
+				</li>
+			</ul>
+		</li>
+		<li class="collapsed">
+			<a href="#" class="name">Project 2</a>
+			<ul class="files">
+				<li>
+					<a href="#" class="name">robot.py</a>
+				</li>
+				<li>
+					<a href="#" class="name">lib.py</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div id="right">
+
+	<div class="mode" id="debug">
+		<pre>-> This is some text</pre>
+	</div>
+
+	<div class="mode" id="edit">
+		<textarea>This is some text</textarea>
+	</div>
+</div>
+</body>
+</html>
