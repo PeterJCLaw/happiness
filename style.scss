@@ -34,13 +34,20 @@ body > *, body > * > *, body > * > * > * {
 }
 
 #left {
+	border-right: $regionBorder;
 	width: 20%;
 }
 
 #right {
-	border-left: $regionBorder;
 	right: 0;
 	width: 80%;
+}
+
+#right-box {
+	height: 100%;
+	left: 0.2em;
+	position: absolute;
+	right: 0;
 }
 
 #mode-select {
