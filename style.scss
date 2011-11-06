@@ -4,7 +4,8 @@ $topHeight: 4.6em;
 $border: solid grey;
 $regionBorderWidth: 3px;
 $regionBorder: $regionBorderWidth $border;
-$projectBorder: 2px $border;
+$lhsListItemBorderWidth: 2px;
+$lhsListItemBorder: $lhsListItemBorderWidth $border;
 
 body {
 	margin: 0;
@@ -67,37 +68,41 @@ div#edit.mode textarea {
 }
 
 
-/* Projects listing */
+/* Tab listing down the LHS */
 
-#projects {
+ul.lhs {
 	display: block;
 	margin: $regionBorderWidth 0 0;
 	padding: 0;
 }
 
-#projects li {
+ul.lhs li {
 	display: block;
 }
-#projects > li {
-	border-bottom: $projectBorder;
-}
-#projects > li > a {
+ul.lhs > li > a {
 	display: block;
 	font-weight: bold;
 	padding: 0.5em 0 0.5em 20px;
 }
-#projects > li.expanded > a {
+ul.lhs > li.expanded > a {
 	background-color: #eee;
 	padding-bottom: 0.2em;
 }
 
-#projects li a {
+ul.lhs li a {
 	color: black;
 	text-decoration: none;
 }
 $highlightColour: lightGrey;
-#projects li a:hover {
+ul.lhs li a:hover {
 	background-color: $highlightColour;
+}
+
+
+/* Projects listing specifics */
+
+#projects > li {
+	border-bottom: $lhsListItemBorder;
 }
 #projects ul.files {
 	margin-bottom: 3px;
