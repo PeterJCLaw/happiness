@@ -1,4 +1,4 @@
-.SUFFIXES: .js .coffee .scss .sass
+.SUFFIXES: .js .coffee .scss .css
 
 .coffee.js:
 	coffee -c $<
@@ -8,4 +8,4 @@
 
 script.js:
 
-style.scss:
+style.css:
