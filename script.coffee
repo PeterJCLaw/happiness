@@ -5,13 +5,13 @@ editor = null
 modes = null
 projects = null
 
-/* log the page load */
+# log the page load
 $ ->
 	$.log('beans')
 	addModes()
 	setupProjects()
+	# this is the default
 	$('#dashboard').show()
-	/* this is the default */
 
 addModes = () ->
 	modes = $('#right .mode')
