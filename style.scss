@@ -10,7 +10,7 @@ $lhsListItemBorder: $lhsListItemBorderWidth $border;
 $lhsTitleVerticalPadding: 0.6em;
 $lhsLineHeight: 1em;
 
-$numOtherTabs: 3;	// The number of li elements in the #other-tabs
+$numOtherTabs: 4;	// The number of li elements in the #other-tabs
 $heightOtherTabs: $numOtherTabs * ($lhsLineHeight + $lhsTitleVerticalPadding * 2 + $lhsListItemBorderWidth);
 
 body {

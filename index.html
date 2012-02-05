@@ -86,6 +86,9 @@
 				<a href="#" class="name">Dashboard</a>
 			</li>
 			<li>
+				<a href="#" class="name">Help / IRC</a>
+			</li>
+			<li>
 				<a href="#" class="name">Administration</a>
 			</li>
 			<li>
@@ -100,15 +103,34 @@
 
 		<style type="text/css">
 			dt { font-weight: bold; }
+			p.description { font-style: italic; color: grey; }
 			.mode > * { margin: 15px; }
 		</style>
 
 		<div class="mode" id="about">
+			<h4>About the About page:</h4>
 			<p>Lift the content per the about box from the old front-end.</p>
 			<p>
 				Could this information be moved out?<br />
 				 * dynamic (version/user) to being part of the dashboard<br />
 				 * constant info (keyboard shortcuts) to being in the docs
+			</p>
+			<h4>About Happiness:</h4>
+			<p>
+				The file browser down the LHS performs the majority of the file control.
+				Files can be opened via a click, and renamed in place.
+				Files are moved by dragging (within a project) to the desired location.
+			</p>
+			<p>
+				It also handles displaying which files are already open, though this has little meaning really, by showing a highlight on the open files.
+				If a file is open, but would be off the top of the scroll (not sure how we work that out, but it's an idea),
+				 then it shows at the top of the list, popped out of its project tree.
+				Clearly such files can't be picked up and moved about -- the user needs to scroll them into view before they can rename/move them.
+			</p>
+			<p>
+				The bar above here with the sections buttons are part of this dummy version of happiness only, and will probably be removed.
+				This leaves the left &amp; right panes as the only parts of the page.
+				Alternatively, we might have a common user-bar across the top, similar to what Google has (suggested by rbarlow at TD1).
 			</p>
 		</div>
 
@@ -153,6 +175,19 @@
 						<li>[12:03, user1] Add a file.</li>
 						<li>[yesterday, user2] Create the project.</li>
 					</ul>
+				</dd>
+				<dt>Local Changes:</dt>
+				<dd>
+					<p class="description">
+						This section shows the user what changes are present in their local tree, but which haven't been committed yet.
+						For advanced users, this is likely to be fairly full as they make changes without committing.
+						For most users, this is just a listing of their autosaved changes.
+						The file names can be expanded to show a full diff of the changes, we could also offer from here the ability to commit the changes, or reset them.
+					</p>
+					<ul>
+						<li>[10:13] robot.py <tt>3 <span style="color: green; ">++</span><span style="color: red; ">-</span></tt></li>
+						<li>[yesterday] libRobot.py <tt>9 <span style="color: green; ">++++</span><span style="color: red; ">----</span></tt></li>
+					</dl>
 				</dd>
 			</dl>
 		</div>
